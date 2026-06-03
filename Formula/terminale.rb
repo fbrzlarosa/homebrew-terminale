@@ -1,20 +1,20 @@
 class Terminale < Formula
   desc "A native, cross-platform, GPU-accelerated terminal — Windows, macOS, Linux"
   homepage "https://stackbyte.dev/terminale"
-  version "0.1.18"
+  version "0.1.19"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.18/terminale-aarch64-apple-darwin.tar.gz"
-      sha256 "bf66b6f38c19b679d8cd86691808db370b6957d6cfa4135519a2e906f88b53d9"
+      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.19/terminale-aarch64-apple-darwin.tar.gz"
+      sha256 "c91e838e04fd9f49df5820422c8701ef7f308818a26326249ed90d72cc72dfa0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.18/terminale-x86_64-apple-darwin.tar.gz"
-      sha256 "0c43799c65eb4c064504711b5ba098ede6b992d01d83f7ab37bddfe8fac338d3"
+      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.19/terminale-x86_64-apple-darwin.tar.gz"
+      sha256 "a812a7ff64a5315fabd10b45baf940502597d6be98b40652d7cb00489e4fa3fc"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.18/terminale-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "4ef9cf9f9581e78bbb2a27df210bc3ba808acccd7e8325362c856d6176232082"
+    url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.19/terminale-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "4b3afef1bdb88fd0837e8be474d168a08048482340aa86edff1a25b0e8125a8c"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
