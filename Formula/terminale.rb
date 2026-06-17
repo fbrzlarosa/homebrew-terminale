@@ -5,16 +5,16 @@ class Terminale < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.34/terminale-aarch64-apple-darwin.tar.gz"
-      sha256 "aec9ff3a4deb4823da9bdceb5ad62c4f41595fc852ef5d638fb8d77163db2915"
+      sha256 "ab05019199430a5a037f619c07104affa4fd44878ded9834b052cbd832e6adab"
     end
     if Hardware::CPU.intel?
       url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.34/terminale-x86_64-apple-darwin.tar.gz"
-      sha256 "851315e951c10623e5c6855dd3c8f9ddc3ad45783e42b1a4d87fb9c1ed0dbb35"
+      sha256 "3a449bca2c7aea7753bb156d07f121b153f807e1cace9cda3991b6f79fa51a46"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.34/terminale-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "c7e3acdd68700fb772b1e7b8bfee2da2867d97f7919dcda52db578c41316c67f"
+    sha256 "ee072feadc97be04eee6a83b4256ce9700150a0b04e7fffb9ea02d94f9bc52af"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
