@@ -1,20 +1,20 @@
 class Terminale < Formula
   desc "A native, cross-platform, GPU-accelerated terminal — Windows, macOS, Linux"
   homepage "https://stackbyte.dev/terminale"
-  version "0.1.37"
+  version "0.1.38"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.37/terminale-aarch64-apple-darwin.tar.gz"
-      sha256 "82229f4287ceb798fcf3a90600f8d1edba2bf7bb9bf64feaa0f70f2c2d200793"
+      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.38/terminale-aarch64-apple-darwin.tar.gz"
+      sha256 "70927c7891ed67c9d94e39704ef36240668004aea36bedc051ba8fa7cbb3548f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.37/terminale-x86_64-apple-darwin.tar.gz"
-      sha256 "76f8c90634ad1a726e4efa2258f64358b4941d4e490d25cad8083f641ec4c47b"
+      url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.38/terminale-x86_64-apple-darwin.tar.gz"
+      sha256 "caa5007396bf7d15103b61c044e0f84f8d2dcc6b68f1849da810326a8aebc38e"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.37/terminale-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "836f92de230fd356feaf354f4eff093753e8840d22d08009c4845409fd1ca0cd"
+    url "https://github.com/fbrzlarosa/terminale/releases/download/v0.1.38/terminale-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "df2ca9a22eaca133a48fca7b79e9ba5fec12a6b51d32205e5088efa26a9d2365"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
@@ -41,9 +41,15 @@ class Terminale < Formula
   end
 
   def install
-    bin.install "terminale" if OS.mac? && Hardware::CPU.arm?
-    bin.install "terminale" if OS.mac? && Hardware::CPU.intel?
-    bin.install "terminale" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "terminale"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "terminale"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "terminale"
+    end
 
     install_binary_aliases!
 
